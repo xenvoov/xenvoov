@@ -1,0 +1,415 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #00185d;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: medium;
+}
+
+p {
+    color: #e1e1e1;
+}
+
+/* Remove HTML tags from CSS file */
+/* If you need to style these elements, use CSS selectors instead */
+/* For example:
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+*/
+
+/* Remove closing HTML tags as they don't belong in a CSS file */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #00185d;
+        }
+        .container {           
+         width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .product-item {
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+            color: rgb(255, 253, 253);
+            border-bottom: 1px solid #686b82;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            color: rgb(194, 29, 29);
+        }
+        .price {
+            font-weight: bold;
+            color: rgb(236, 236, 236);
+        }
+        .description {
+            font-size: 0.9em;
+            color: rgb(194, 29, 29);
+            }
+            .logo {
+                height: 70px;
+                width: 70px;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+
+            header #branding {
+                display: inline-flex;
+                align-items: center;
+                margin-top: 10px;
+                    }
+        header {
+            background: #152e79;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #686b82 3px solid;
+        }
+        header a {
+            color: #c5c5c5;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        header li {
+            display: inline;
+            padding: 0 10px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #cbcadb;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #28296aa7;
+            font-weight: bold;
+        }
+        .button {
+            background-color: #000000;
+            color: #ececec;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            font: 1em sans-serif;
+            color: #f9f6f6;
+        }
+            .button {
+                background-color: #000000;
+                color: #ececec;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 10px 0px;
+                cursor: pointer;
+                border: none;
+                border-radius: 4px;
+                transition: background-color 0.3s ease;
+                font: 1em sans-serif;
+            }
+            
+            .button:hover {
+                background-color: #333333;
+            }
+            
+            .cart-button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 5px 10px;
+                text-align: center;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                cursor: pointer;
+                border: none;
+                border-radius: 4px;
+                transition: background-color 0.3s ease;
+                position: absolute;
+                top: 30px; /* Changed from 10px to 30px */
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1000;
+            }
+            
+            .cart-button:hover {
+                background-color: #45a049;
+            }
+            
+            .cart-button i {
+                margin-right: 5px;
+                font-size: 16px;
+            }
+
+            .cart-info {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            #cart-quantity {
+                font-weight: bold;
+                font-size: 14px;
+                margin-right: 5px;
+            }
+
+            #cart-total {
+                font-size: 12px;
+            }
+
+            .button.add-to-cart {
+                transition: all 0.3s ease;
+            }
+
+            .button.add-to-cart.clicked {
+                background-color: #4CAF50;
+                transform: scale(1.1);
+            }
+
+            .cart-item {
+                background-color: #ffffff;
+                border-radius: 4px;
+                padding: 10px;
+                margin-bottom: 10px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            .cart-item span {
+                color: #00185d;
+            }
+
+            .remove-item {
+                background-color: #ff4d4d;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .remove-item:hover {
+                background-color: #ff3333;
+            }
+
+            #cart-total {
+                font-size: 1.2em;
+                font-weight: bold;
+                margin-top: 20px;
+                color: #ffffff;
+            }
+
+.quantity-indicator {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 50%;
+    font-size: 12px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.checkout-item {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout-item span {
+    color: #00185d;
+}
+
+.social-links {
+    margin-top: 20px;
+    text-align: right; /* Align the container to the right */
+    padding-right: 20px; /* Add some padding to the right */
+}
+
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px; /* Reduced padding */
+    margin: 5px; /* Reduced margin */
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em; /* Reduced font size */
+}
+
+.social-button img {
+    width: 20px; /* Reduced image size */
+    height: 20px; /* Reduced image size */
+    margin-right: 8px; /* Reduced margin */
+}
+
+.instagram-button {
+    background-color: #E1306C;
+}
+
+.instagram-button:hover {
+    background-color: #C13584;
+}
+
+.whatsapp-button {
+    background-color: #25D366;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+}
+
+.checkout-button {
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #45a049;
+}
+
+/* Contact page styles */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.contact-form, .contact-info {
+    flex-basis: 48%;
+}
+
+.contact-info {
+    padding-left: 60px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-info h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    color: #e1e1e1;
+}
+
+.form-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #45a049;
+}
+
+.form-note {
+    font-size: 0.9em;
+    color: #e1e1e1;
+    margin-top: 10px;
+}
+
+.view-cart-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.view-cart-container .cart-button {
+    position: static;
+    transform: none;
+}
+
+.item-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}

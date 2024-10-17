@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us - TV STREAMING LB</title>
+</head>
+<body>
+    <header>
+        <!-- ... existing header code ... -->
+    </header>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit">Send to WhatsApp</button>
+                </form>
+                <div id="form-status"></div>
+            </div>
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Have questions or need assistance? Contact us using the form or through our social media channels.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/tvstreaming.lb/profilecard/?igsh=MXBwN2hmbzY2b25lZA==" class="social-button instagram-button" target="_blank">
+                        <img src="insta.jpeg" alt="Instagram">
+                        Follow us on Instagram
+                    </a>
+                    <a href="https://wa.me/+96171463377" class="social-button whatsapp-button" target="_blank">
+                        <img src="wts.jpeg" alt="WhatsApp">
+                        Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+      
+      var whatsappMessage = "Name: " + name + "%0A" +
+                            "Email: " + email + "%0A" +
+                            "Message: " + message;
+      
+      var whatsappNumber = "+96171463377"; // Replace with your WhatsApp number
+      var whatsappLink = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(whatsappMessage);
+      
+      window.open(whatsappLink, '_blank');
+    });
+    </script>
+</body>
+</html>
